@@ -24,4 +24,20 @@ $1,$2 - Field no.
 7. To print only the line number 6[The NR which is present in the flower brackets is optional this to     print line number 6]
    awk 'NR==6 {print NR, $0}' employee.txt
 
-8. 
+8. To print the range of lines[e.g 3rd line to 6th line]
+   awk 'NR==3, NR==6 {print NR,$0}' employee.txt
+
+9. To print the empty lines.
+   awk 'NF==0 {print NR}' employee.txt
+
+10. To search multiple files.
+    awk '/Raju|Shyam|Alex/ {print $0}' employee.txt
+
+11. Ignore case search
+    awk 'BEGIN{IGNORECASE=1} /alexandr/ {print $0}' employee.txt
+
+12. To search a word in a column
+    awk '$2 ~ /a/ {print $0}' employee.txt
+
+13. To print a specific column data
+    awk -F, '{print $2}' employee.csv
