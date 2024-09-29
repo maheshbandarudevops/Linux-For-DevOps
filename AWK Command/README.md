@@ -24,4 +24,4 @@ $1,$2 - Field no.
 7. To print only the line number 6[The NR which is present in the flower brackets is optional this to     print line number 6]
    awk 'NR==6 {print NR, $0}' employee.txt
 
-8. 
+8.  
